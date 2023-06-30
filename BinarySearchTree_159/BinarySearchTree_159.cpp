@@ -51,7 +51,37 @@ public:
 		}
 		else if (element > parent->info)	//If the value in the datafield of the new node is greater than of the parent
 		{
-
+			parent->rightchild = newNode;	//Make the right child of the parent poin to thenew node
 		}
 	}
+
+	void search(string element, Node*& parent, Node*& currentNode)
+	{
+		//this function searches the currentNode of the specified node as well as the current node of its parent
+		currentNode = ROOT;
+		parent = NULL;
+		while ((currentNode != NULL) && (currentNode->info != element))
+		{
+			parent = currentNode;
+			if (element < currentNode->info)
+				currentNode = currentNode->leftchild;
+			else
+				currentNode = currentNode->rightchild;
+		}
+	}
+	void inorder(Node* ptr)
+	{
+		if (ROOT == NULL)
+		{
+			cout << "Tree is empty" << endl;
+			return;
+		}
+		if (ptr != NULL)
+		{
+			inorder(ptr->leftchild);
+			cout << ptr->info << " ";
+			inorder(ptr->rightchild);
+		}
+	}
+	void preoder
 };
