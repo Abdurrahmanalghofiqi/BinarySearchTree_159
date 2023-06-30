@@ -135,6 +135,7 @@ int main()
 		switch (ch)
 		{
 		case '1':
+		{
 			cout << "Enter a word: ";
 			string word;
 			cin >> word;
@@ -154,6 +155,7 @@ int main()
 		case '4':
 		{
 			obj.postorder(obj.ROOT); break;
+			break;
 		}
 		case '5':
 			return 0;
