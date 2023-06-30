@@ -38,5 +38,11 @@ public:
 		Node* parent = NULL;
 		Node* currentNode = NULL;
 		search(element, parent, currentNode);	//Locate the node which will bi the parent of the node to be in serted
+
+		if (parent == NULL)	//If the parent is NULL (tree is emoty)
+		{
+			ROOT = newNode;	//Mark the new node as ROOT
+			return;	//Exit
+		}
 	}
 };
