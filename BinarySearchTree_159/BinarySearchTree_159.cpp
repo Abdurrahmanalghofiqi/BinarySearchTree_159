@@ -10,8 +10,23 @@ public:
 	Node* rightchild;
 
 	//constructor for the node class
-	Node(string i, Node* 1, Node* r);
+	Node(string i, Node* l, Node* r);
 	{
-
+		info = i;
+		leftchild = l;
+		rightchild = r;
 	}
+};
+
+class BinaryTree
+{
+public:
+	Node* ROOT;
+
+	BinaryTree()
+	{
+		ROOT = NULL;	//initializing ROOT to null
+	}
+
+	void insert(string element)	//Insert a node in the binary search tree
 };
